@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIGI - Verification Validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+  </head>
+  <body>
+    <main>
+      <header class="header">
+            <a href="javascript:void(0)" class="toggle-sidebar"><i class="fa-solid fa-bars-staggered"></i></a>
+        </header>
+      <div class="layout-main">
+        <ul class="layout-sidebar">
+          <li><a href="/dashboard.html">Dashboard</a></li>
+          <li><a href="/add-funds.html">Add Funds Via Bank Transfer</a></li>
+          <li><a href="/buy-gold.html">Buy Gold</a></li>
+          <li class="active">
+            <a href="javascript:void(0)">Verification & Validation</a>
+          </li>
+          <li><a href="/sell-gold.html">Sell Gold</a></li>
+          <li><a href="/withdraw-funds.html">Withdraw Funds</a></li>
+          <li><a href="/auto-invest.html">Auto Invest Monthly</a></li>
+          <li><a href="/profit-tracker.html">Profit Tracker</a></li>
+          <li><a href="/transaction-history.html">Transaction History</a></li>
+          <li><a href="/refer-friend.html">Refer a Friend</a></li>
+          <li><a href="/settings.html">Settings</a></li>
+        </ul>
+        <div class="layout-content">
+          <div class="verification-status">
+            <span
+              >Your Account is Unverified, please Verify within 2 weeks to
+              Continue using Your Account.</span
+            >
+          </div>
+          <div class="dashboard-main add-funds-main verification-validation">
+            <div class="dashboard-header">
+              <h2>VERIFICATION & VALIDATION</h2>
+              <!-- Is Verfified -->
+              <a href="javascript:void(0)" class="dc-btn yellow-btn" data-bs-toggle="modal" data-bs-target="#verification-edit-modal">EDIT</a>
+              <!-- Is Verfified -->
+            </div>
+            <!-- Not Verified  -->
+            <!-- <div class="verfication-validation-content">
+              <h5>VERIFY YOUR DOCUMENTS</h5>
+              <p>
+                Your Account is Unverified, please Verify within 2 weeks to
+                Continue using Your Account.
+              </p>
+              <div class="vv-cntn-btn">
+                <a
+                  href="javascript:void(0)"
+                  class="dc-btn grey-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#remind-later-modal"
+                  >REMIND ME LATER</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="dc-btn yellow-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#verification-modal"
+                  >VERIFY NOW</a
+                >
+              </div>
+            </div> -->
+            <!-- Not Verified  -->
+            <!-- Verified  -->
+            <div class="vv-head">
+              <span>Your Account is Verified</span>
+            </div>
+            <div class="vv-details-main">
+              <div class="vv-detail">
+                <div class="vv detail-head">
+                  <h4>Type of account</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="vv-detail-txt">
+                      <span>I want to deposit from:</span>
+                      <h6>A Trust Account</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vv-detail">
+                <div class="vv detail-head">
+                  <h4>ADDRESS/ MAILING ADDRESS</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Address Line 1 (as on bank statement):</span>
+                      <h6>18 Bennett Rapid</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Address Line 2:</span>
+                      <h6>162 Mary Crossroad</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>County / State</span>
+                      <h6>North Muhammad</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Town / City</span>
+                      <h6>Rubyville</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Country</span>
+                      <h6>United Kingdom</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Zip / Postcode</span>
+                      <h6>SW15 4AF</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vv-detail">
+                <div class="vv detail-head">
+                  <h4>BANK ACCOUNT DETAILS</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Bank Name:</span>
+                      <h6>TSB</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Bank Account Number:</span>
+                      <h6>86063057</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Bank Sort Code:</span>
+                      <h6>301301</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>IBAN:</span>
+                      <h6>GB33BUKB20201555555555</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Account Holder(s) Name:</span>
+                      <h6>Jeff Jorden</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vv-detail">
+                <div class="vv detail-head">
+                  <h4>Identity Documents</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Passport / Photocard Driving License:</span>
+                      <h6><a href="/images/slip.jpg" class="dc-btn yellow-btn" data-fancybox="">SEE ATTACHMENT</a></h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Address Proof:</span>
+                      <h6><a href="/images/slip.jpg" class="dc-btn yellow-btn" data-fancybox="">SEE ATTACHMENT</a></h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="vv-detail-txt">
+                      <span>Bank Statement:</span>
+                      <h6><a href="/images/slip.jpg" class="dc-btn yellow-btn" data-fancybox="">SEE ATTACHMENT</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Verified  -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade remind-later-modal"
+        id="remind-later-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="rl-modal-txt">
+                <p>Thanks we'll notify you later for verification.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade verification-modal"
+        id="verification-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="verification-modal-main">
+                <form id="msform">
+                  <ul id="progressbar">
+                    <li class="active">Type of Account</li>
+                    <li>Bank Account Details</li>
+                    <li>Address/Mailing Address</li>
+                    <li>Identity Documents</li>
+                  </ul>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>Type of account</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>I want to deposit from:</label>
+                            <div class="select-custom">
+                              <select>
+                                <option value="Bank">Bank</option>
+                                <option value="Card">Card</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multi-btns multi-btns-right">
+                      <div class="next-button">
+                        <input
+                          type="button"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="SAVE AND CONTINUE"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>Address/Mailing Address</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>Address Line 1 (as on bank statement)</label>
+                            <input type="text" placeholder="Address" />
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>Address Line 2 (optional)</label>
+                            <input type="text" placeholder="Address" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Town / City</label>
+                            <input type="text" placeholder="Town / City" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Country / State (optional)</label>
+                            <input
+                              type="text"
+                              placeholder="Country / State (optional)"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Zip / Postcode (optional)</label>
+                            <input
+                              type="text"
+                              placeholder="Zip / Postcode (optional)"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Country</label>
+                            <div class="select-custom">
+                              <select name="" id="">
+                                <option value="USA">USA</option>
+                                <option value="USA">UK</option>
+                                <option value="USA">CANADA</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multi-btns">
+                      <div class="prev-button">
+                        <input
+                          type="button"
+                          name="previous"
+                          class="previous prev-btn dc-btn grey-btn"
+                          value="BACK"
+                        />
+                      </div>
+                      <div class="next-button">
+                        <input
+                          type="button"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="SAVE AND CONTINUE"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>BANK ACCOUNT DETAILS</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>The Bank is in</label>
+                            <div class="select-custom">
+                              <select name="" id="">
+                                <option value="BANK 1">BANK 1</option>
+                                <option value="BANK 2">BANK 2</option>
+                                <option value="BANK 3">BANK 3</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Bank Name</label>
+                            <input type="text" placeholder="Bank Name" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Bank Account Number</label>
+                            <input
+                              type="number"
+                              placeholder="Bank Account Number"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Bank Sort Code</label>
+                            <input
+                              type="number"
+                              placeholder="Bank Sort Code"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>SWIFT BIC (optional)</label>
+                            <input
+                              type="number"
+                              placeholder="SWIFT BIC (optional)"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>IBAN (optional)</label>
+                            <input
+                              type="text"
+                              placeholder="IBAN"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Account Holder(s) Name</label>
+                            <input
+                              type="text"
+                              placeholder="Account Holder(s) Name"
+                            />
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="multi-btns">
+                      <div class="prev-button">
+                        <input
+                          type="button"
+                          name="previous"
+                          class="previous prev-btn dc-btn grey-btn"
+                          value="BACK"
+                        />
+                      </div>
+                      <div class="next-button">
+                        <input
+                          type="button"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="SAVE AND CONTINUE"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>Identity Documents</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Passport / Photocard Driving License:</label>
+                            <div class="file-upload-info-div">
+                              <input type="file" id="dp-file">
+                              <label for="dp-file" class="file-upload-info"> Choose File </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="form-input-main">
+                            <label>Address Proof:</label>
+                            <div class="file-upload-info-div">
+                              <input type="file" id="dp-file">
+                              <label for="dp-file" class="file-upload-info"> Choose File </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="form-input-main">
+                            <label>Bank Statement:</label>
+                            <div class="file-upload-info-div">
+                              <input type="file" id="dp-file">
+                              <label for="dp-file" class="file-upload-info"> Choose File </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multi-btns">
+                      <div class="prev-button">
+                        <input
+                          type="button"
+                          name="previous"
+                          class="previous prev-btn dc-btn grey-btn"
+                          value="BACK"
+                        />
+                      </div>
+                      <div class="next-button">
+                        <input
+                          type="submit"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="SUBMIT"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- VERIFICATION EDIT MODAL -->
+
+      <div
+        class="modal fade verification-edit-modal"
+        id="verification-edit-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered ">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="verification-modal-main">
+                <form id="msform">
+                  <ul id="progressbar">
+                    <li class="active">Type of Account</li>
+                    <li>Bank Account Details</li>
+                    <li>Address/Mailing Address</li>
+                    <li>Identity Documents</li>
+                  </ul>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>Type of account</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>I want to deposit from:</label>
+                            <div class="select-custom">
+                              <select required>
+                                <option value="">Deposit from</option>
+                                <option value="Bank">Bank</option>
+                                <option value="Card">Card</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multi-btns multi-btns-right">
+                      <div class="next-button">
+                        <input
+                          type="button"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="EDIT AND CONTINUE"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>Address/Mailing Address</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>Address Line 1 (as on bank statement)</label>
+                            <input type="text" placeholder="Address" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>Address Line 2 (optional)</label>
+                            <input type="text" placeholder="Address" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Town / City</label>
+                            <input type="text" placeholder="Town / City" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Country / State (optional)</label>
+                            <input
+                              type="text"
+                              placeholder="Country / State (optional)"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Zip / Postcode (optional)</label>
+                            <input
+                              type="text"
+                              placeholder="Zip / Postcode (optional)"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Country</label>
+                            <div class="select-custom">
+                              <select name="" id="" required>
+                                <option value="USA">USA</option>
+                                <option value="USA">UK</option>
+                                <option value="USA">CANADA</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multi-btns">
+                      <div class="prev-button">
+                        <input
+                          type="button"
+                          name="previous"
+                          class="previous prev-btn dc-btn grey-btn"
+                          value="BACK"
+                        />
+                      </div>
+                      <div class="next-button">
+                        <input
+                          type="button"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="EDIT AND CONTINUE"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>BANK ACCOUNT DETAILS</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-input-main">
+                            <label>The Bank is in</label>
+                            <div class="select-custom">
+                              <select name="" id="">
+                                <option value="BANK 1">BANK 1</option>
+                                <option value="BANK 2">BANK 2</option>
+                                <option value="BANK 3">BANK 3</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Bank Name</label>
+                            <input type="text" placeholder="Bank Name" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Bank Account Number</label>
+                            <input
+                              type="number"
+                              placeholder="Bank Account Number"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Bank Sort Code</label>
+                            <input
+                              type="number"
+                              placeholder="Bank Sort Code"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>SWIFT BIC (optional)</label>
+                            <input
+                              type="number"
+                              placeholder="SWIFT BIC (optional)"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>IBAN (optional)</label>
+                            <input
+                              type="text"
+                              placeholder="IBAN"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Account Holder(s) Name</label>
+                            <input
+                              type="text"
+                              placeholder="Account Holder(s) Name"
+                            />
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="multi-btns">
+                      <div class="prev-button">
+                        <input
+                          type="button"
+                          name="previous"
+                          class="previous prev-btn dc-btn grey-btn"
+                          value="BACK"
+                        />
+                      </div>
+                      <div class="next-button">
+                        <input
+                          type="button"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="EDIT AND CONTINUE"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="multi-head">
+                      <h3>Identity Documents</h3>
+                    </div>
+                    <div class="multi-fields">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-input-main">
+                            <label>Passport / Photocard Driving License:</label>
+                            <div class="mf-preview">
+                              <a href="./images/slip.jpg" data-fancybox><img src="./images/slip.jpg" alt=""></a>
+                            </div>
+                            <div class="file-upload-info-div">
+                              <input type="file" id="dp-file">
+                              <label for="dp-file" class="file-upload-info"> Change File </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="form-input-main">
+                            <label>Address Proof:</label>
+                            <div class="mf-preview">
+                              <a href="./images/slip.jpg" data-fancybox><img src="./images/slip.jpg" alt=""></a>
+                            </div>
+                            <div class="file-upload-info-div">
+                              <input type="file" id="dp-file">
+                              <label for="dp-file" class="file-upload-info"> Change File </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="form-input-main">
+                            <label>Bank Statement:</label>
+                            <div class="mf-preview">
+                              <a href="./images/slip.jpg" data-fancybox><img src="./images/slip.jpg" alt=""></a>
+                            </div>
+                            <div class="file-upload-info-div">
+                              <input type="file" id="dp-file">
+                              <label for="dp-file" class="file-upload-info"> Change File </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multi-btns">
+                      <div class="prev-button">
+                        <input
+                          type="button"
+                          name="previous"
+                          class="previous prev-btn dc-btn grey-btn"
+                          value="BACK"
+                        />
+                      </div>
+                      <div class="next-button">
+                        <input
+                          type="submit"
+                          name="next"
+                          class="next next-btn dc-btn yellow-btn"
+                          value="SUBMIT"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VERIFICATION EDIT MODAL -->
+
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js"
+      type="text/javascript"
+    ></script>
+    <script>
+
+      function adjustModalHeight(modal) {
+          var currentHeight = $(modal).find("fieldset.active").outerHeight() + 200; // Get the height of the active fieldset inside the modal
+          $(modal).find(".modal-content").animate({ height: currentHeight }, 300); // Adjust the modal-content height
+      }
+  
+      $(document).ready(function () {
+          // Set the modal height based on the first fieldset when the modal opens
+          $(".modal").each(function () {
+              $(this).find("fieldset").first().addClass("active"); // Add active class to the first fieldset in each modal
+              adjustModalHeight(this); // Adjust height for each modal
+          });
+  
+          // Adjust height when window is resized
+          $(window).resize(function () {
+              $(".modal").each(function () {
+                  adjustModalHeight(this); // Adjust height for each modal on window resize
+              });
+          });
+      });
+  
+      // jQuery time
+      var current_fs, next_fs, previous_fs; // fieldsets
+      var left, opacity, scale; // fieldset properties for animation
+      var animating = false; // flag to prevent quick multi-click glitches
+  
+      // Function to check if all required fields are filled
+      function validateRequiredFields(fieldset) {
+          let isValid = true;
+          $(fieldset).find(":input[required]").each(function () {
+              if (!$(this).val()) {
+                  isValid = false;
+                  $(this).addClass("error"); // Optional: Add error class for styling
+              } else {
+                  $(this).removeClass("error"); // Remove error class if field is filled
+              }
+          });
+          return isValid;
+      }
+  
+      $(".next").click(function () {
+          if (animating) return false;
+  
+          // Validate required fields in the current fieldset
+          current_fs = $(this).closest("fieldset");
+          if (!validateRequiredFields(current_fs)) {
+              return false; // Stop if validation fails
+          }
+  
+          animating = true;
+  
+          var modal = $(this).closest(".modal"); // Get the modal this button belongs to
+          next_fs = current_fs.next("fieldset");
+  
+          // Activate next step on progressbar
+          $(modal).find("#progressbar li").eq($(modal).find("fieldset").index(next_fs)).addClass("active");
+  
+          // Show the next fieldset
+          next_fs.show();
+  
+          // Remove active class from current and add it to the next fieldset
+          current_fs.removeClass("active");
+          next_fs.addClass("active");
+  
+          adjustModalHeight(modal); // Adjust the modal height after switching fieldsets
+  
+          current_fs.animate(
+              { opacity: 0 },
+              {
+                  step: function (now, mx) {
+                      // 1. scale current_fs down to 80%
+                      scale = 1 - (1 - now) * 0.2;
+                      // 2. bring next_fs from the right (50%)
+                      left = now * 50 + "%";
+                      // 3. increase opacity of next_fs to 1 as it moves in
+                      opacity = 1 - now;
+                      current_fs.css({ transform: "scale(" + scale + ")" });
+                      next_fs.css({ left: left, opacity: opacity });
+                  },
+                  duration: 800,
+                  complete: function () {
+                      current_fs.hide();
+                      animating = false;
+                  },
+                  easing: "easeInOutBack",
+              }
+          );
+      });
+  
+      $(".previous").click(function () {
+          if (animating) return false;
+          animating = true;
+  
+          var modal = $(this).closest(".modal"); // Get the modal this button belongs to
+          current_fs = $(this).closest("fieldset");
+          previous_fs = current_fs.prev("fieldset");
+  
+          // Deactivate current step on progressbar
+          $(modal).find("#progressbar li").eq($(modal).find("fieldset").index(current_fs)).removeClass("active");
+  
+          // Show the previous fieldset
+          previous_fs.show();
+  
+          // Remove active class from current and add it to the previous fieldset
+          current_fs.removeClass("active");
+          previous_fs.addClass("active");
+  
+          adjustModalHeight(modal); // Adjust the modal height after switching fieldsets
+  
+          current_fs.animate(
+              { opacity: 0 },
+              {
+                  step: function (now, mx) {
+                      // 1. scale previous_fs from 80% to 100%
+                      scale = 0.8 + (1 - now) * 0.2;
+                      // 2. move current_fs to the right (50%)
+                      left = (1 - now) * 50 + "%";
+                      // 3. increase opacity of previous_fs to 1 as it moves in
+                      opacity = 1 - now;
+                      current_fs.css({ left: left });
+                      previous_fs.css({
+                          transform: "scale(" + scale + ")",
+                          opacity: opacity,
+                      });
+                  },
+                  duration: 800,
+                  complete: function () {
+                      current_fs.hide();
+                      animating = false;
+                  },
+                  easing: "easeInOutBack",
+              }
+          );
+      });
+  
+    </script>
+    <script>
+      $(".toggle-sidebar").on("click", function() {
+          $(".layout-sidebar").toggleClass("open");
+          $(".toggle-sidebar i").toggleClass("fa-bars-staggered")
+          $(".toggle-sidebar i").toggleClass("fa-xmark")
+      })
+  </script>
+  </body>
+</html>

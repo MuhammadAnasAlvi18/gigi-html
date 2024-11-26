@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIGI - Settings</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+            <a href="javascript:void(0)" class="toggle-sidebar"><i class="fa-solid fa-bars-staggered"></i></a>
+        </header>
+      <div class="layout-main">
+        <ul class="layout-sidebar">
+          <li><a href="/dashboard.html">Dashboard</a></li>
+          <li><a href="/add-funds.html">Add Funds Via Bank Transfer</a></li>
+          <li><a href="/buy-gold.html">Buy Gold</a></li>
+          <li><a href="/verification-validation.html">Verification & Validation</a></li>
+          <li><a href="/sell-gold.html">Sell Gold</a></li>
+          <li><a href="/withdraw-funds.html">Withdraw Funds</a></li>
+          <li><a href="/auto-invest.html">Auto Invest Monthly</a></li>
+          <li><a href="/profit-tracker.html">Profit Tracker</a></li>
+          <li><a href="/transaction-history.html">Transaction History</a></li>
+          <li><a href="/refer-friend.html">Refer a Friend</a></li>
+          <li class="active"><a href="javascript:void(0)">Settings</a></li>
+        </ul>
+        <div class="layout-content">
+          <div class="verification-status">
+            <span
+              >Your Account is Unverified, please Verify within 2 weeks to
+              Continue using Your Account.</span
+            >
+          </div>
+          <div class="dashboard-main verification-validation">
+            <div class="dashboard-header">
+              <h2>Settings</h2>
+            </div>
+            <div class="settings-tabs-wrapper">
+              <div class="setting-tab-left">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="acc-idnt-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#acc-idnt-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="acc-idnt-tab-pane"
+                      aria-selected="true"
+                    >
+                      Account Identity
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="cnt-dtl-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#cnt-dtl-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="cnt-dtl-tab-pane"
+                      aria-selected="false"
+                    >
+                      Contact Details
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="bnk-dtl-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#bnk-dtl-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="bnk-dtl-tab-pane"
+                      aria-selected="false"
+                    >
+                      Bank Details
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="acc-pref-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#acc-pref-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="acc-pref-tab-pane"
+                      aria-selected="false"
+                    >
+                      Account Preferences
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="setting-tab-right">
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="acc-idnt-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="acc-idnt-tab"
+                    tabindex="0"
+                  >
+                    <div class="setting-tab-header">
+                      <h4>Account Identity</h4>
+                    </div>
+                    <div class="setting-tab-box">
+                      <div class="setting-tab-box-head">
+                        <h5>Personal Information</h5>
+                        <a
+                          href="javascript:void(0)"
+                          class="dc-btn dgreen-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#ai-username-modal"
+                          >EDIT</a
+                        >
+                      </div>
+                      <div class="setting-tab-row row">
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>User Name</span>
+                            <h6>Jeff jorden</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Member Since</span>
+                            <h6>14-12-2022</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Account Status</span>
+                            <h6>Un-Verified</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Change Password</span>
+                            <h6><a href="javascript:void(0)" data-bs-toggle="modal"
+                                data-bs-target="#ai-chng-pswd-modal">Click Here</a></h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="cnt-dtl-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="cnt-dtl-tab"
+                    tabindex="0"
+                  >
+                    <div class="setting-tab-header">
+                      <h4>Contact Details</h4>
+                    </div>
+                    <div class="setting-tab-box">
+                      <div class="setting-tab-box-head">
+                        <h5>Personal Information</h5>
+                        <a href="javascript:void(0)" class="dc-btn dgreen-btn" data-bs-toggle="modal"
+                        data-bs-target="#cntct-dtl-modal"
+                          >EDIT</a
+                        >
+                      </div>
+                      <div class="setting-tab-row row">
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Name</span>
+                            <h6>Jeff jorden</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Email Address</span>
+                            <h6>jeffjorden@gmail.com</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Phone Number</span>
+                            <h6>1 (800) 917-5706</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Address</span>
+                            <h6>
+                              18 Bennett Rapid, North Muhammad, United Kingdom
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="bnk-dtl-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="bnk-dtl-tab"
+                    tabindex="0"
+                  >
+                    <div class="setting-tab-header">
+                      <h4>Bank Details</h4>
+                    </div>
+                    <div class="setting-tab-box">
+                      <div class="setting-tab-box-head">
+                        <h5>Personal Information</h5>
+                      </div>
+                      <div class="setting-tab-row row">
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Bank Name</span>
+                            <h6>TSB Bank</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Bank Account Number</span>
+                            <h6>86063057</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>IBAN</span>
+                            <h6>GB33BUKB20201555555555</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Sort Code</span>
+                            <h6>TSBSGB2A</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="acc-pref-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="acc-pref-tab"
+                    tabindex="0"
+                  >
+                    <div class="setting-tab-header">
+                      <h4>Account Preferences</h4>
+                    </div>
+                    <div class="setting-tab-box">
+                      <div class="setting-tab-box-head">
+                        <h5>Personal Information</h5>
+                        <a href="javascript:void(0)" class="dc-btn dgreen-btn" data-bs-toggle="modal"
+                        data-bs-target="#ap-currency-modal"
+                          >EDIT</a
+                        >
+                      </div>
+                      <div class="setting-tab-row row">
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>My Valuation Currency</span>
+                            <h6>£ (GBP)</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>My Time Zone</span>
+                            <h6>UTC+01:00</h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="setting-info">
+                            <span>Language</span>
+                            <h6>English</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Identity Username Change Modal -->
+      <div
+        class="modal fade add-funds-modal ai-username-modal"
+        id="ai-username-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>User Name:</label>
+                      <input type="text" placeholder="Jeff_jordan" />
+                    </div>
+                  </div>
+                  <div class="form-input-btn">
+                    <button type="submit" class="dc-btn yellow-btn">
+                      SAVE AND CHANGE
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Identity Change Password Modal -->
+      <div
+        class="modal fade add-funds-modal ai-chng-pswd-modal"
+        id="ai-chng-pswd-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Old Password:</label>
+                      <input type="password" name="old-password" placeholder="**********" />
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Password:</label>
+                      <input type="password" name="new-password" placeholder="**********" />
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Confirm Password:</label>
+                      <input type="password" name="confirm-password" placeholder="**********" />
+                    </div>
+                  </div>
+                  <div class="form-input-btn">
+                    <button type="submit" class="dc-btn yellow-btn">
+                      SAVE AND CHANGE
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Detail Modal -->
+      <div
+        class="modal fade add-funds-modal cntct-dtl-modal"
+        id="cntct-dtl-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Name:</label>
+                      <input type="text" placeholder="Jeff Jorden" />
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Phone Number:</label>
+                      <input type="password" placeholder="1 (800) 917-5706" />
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Address:</label>
+                      <input type="text" placeholder="18 Bennett Rapid, North Muhammad, United Kingdom" />
+                    </div>
+                  </div>
+                  <div class="form-input-btn">
+                    <button type="submit" class="dc-btn yellow-btn">
+                      SAVE AND CHANGE
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Preference Currency Modal -->
+      <div
+        class="modal fade add-funds-modal ap-currency-modal"
+        id="ap-currency-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="form-input-main">
+                      <label>Currency:</label>
+                      <div class="select-custom">
+                        <select>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-input-btn">
+                    <button type="submit" class="dc-btn yellow-btn">
+                      SAVE AND CHANGE
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".toggle-sidebar").on("click", function() {
+          $(".layout-sidebar").toggleClass("open");
+          $(".toggle-sidebar i").toggleClass("fa-bars-staggered")
+          $(".toggle-sidebar i").toggleClass("fa-xmark")
+      })
+  </script>
+  </body>
+</html>

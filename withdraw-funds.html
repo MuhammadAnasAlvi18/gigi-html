@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIGI - Withdraw Funds</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+            <a href="javascript:void(0)" class="toggle-sidebar"><i class="fa-solid fa-bars-staggered"></i></a>
+        </header>
+      <div class="layout-main">
+        <ul class="layout-sidebar">
+          <li><a href="/dashboard.html">Dashboard</a></li>
+          <li>
+            <a href="/add-funds.html">Add Funds Via Bank Transfer</a>
+          </li>
+          <li><a href="/buy-gold.html">Buy Gold</a></li>
+          <li><a href="/verification-validation.html">Verification & Validation</a></li>
+          <li><a href="/sell-gold.html">Sell Gold</a></li>
+          <li class="active"><a href="javascript:void(0)">Withdraw Funds</a></li>
+          <li><a href="/auto-invest.html">Auto Invest Monthly</a></li>
+          <li><a href="/profit-tracker.html">Profit Tracker</a></li>
+          <li><a href="/transaction-history.html">Transaction History</a></li>
+          <li><a href="/refer-friend.html">Refer a Friend</a></li>
+          <li><a href="/settings.html">Settings</a></li>
+        </ul>
+        <div class="layout-content">
+          <div class="verification-status">
+            <span
+              >Your Account is Unverified, please Verify within 2 weeks to
+              Continue using Your Account.</span
+            >
+          </div>
+          <div class="dashboard-main add-funds-main">
+            <!-- Not Verified  -->
+            <!--
+            <div class="dashboard-header">
+            <h2>Withdraw Funds</h2>
+            </div> 
+            <div class="verfication-validation-content">
+            <h5>First Verify Your Documents</h5>
+            <p>
+                Your Account is Unverified, please Verify Your Account to Withdraw Funds.
+            </p>
+            <div class="vv-cntn-btn">
+                <a
+                href="/verification-validation.html"
+                class="dc-btn yellow-btn"
+                >VERIFY YOUR ACCOUNT</a
+                >
+            </div>
+            </div> -->
+            <!-- Not Verified  -->
+            <!-- Verified -->
+            <div class="dashboard-header">
+              <h2>Withdraw Funds</h2>
+              <a
+                href="javascript:void(0)"
+                class="dc-btn yellow-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#add-funds-modal"
+                >WITHDRAW REQUEST</a
+              >
+            </div>
+            <div class="add-funds-ac-dtl">
+              <p>
+                Sold your Gold and ready to reap your profit? <span class="d-block">Then use this page to transfer money from your Wallet Balance directly into your Bank Account.</span>
+              </p>
+              <p>Withdrawal requests will be processed within 48 hours on our end. The money will then arrive in your account soon after this (depending on your individual banks processing time).</p>
+            </div>
+            <div class="af-transfer-history">
+              <div class="tranfer-history-table">
+                <div class="table-responsive">
+                  <table class="table-info">
+                    <thead>
+                      <tr>
+                        <th>TRANSACTION ID</th>
+                        <th>DATE</th>
+                        <th>AMOUNT</th>
+                        <th>STATUS</th>
+                        <th>RECEIPT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#430</td>
+                        <td>12-09-2024</td>
+                        <td>€ 900</td>
+                        <td>
+                          <span class="table-chip completed">Completed</span>
+                        </td>
+                        <td>
+                          <a
+                            class="dc-btn yellow-btn"
+                            href="javascript:void(0)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#transfer-history-modal"
+                            >VIEW</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#430</td>
+                        <td>12-09-2024</td>
+                        <td>€ 900</td>
+                        <td><span class="table-chip pending">Pending</span></td>
+                        <td>
+                          <a
+                            class="dc-btn yellow-btn"
+                            href="javascript:void(0)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#transfer-history-modal"
+                            >VIEW</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#430</td>
+                        <td>12-09-2024</td>
+                        <td>€ 900</td>
+                        <td><span class="table-chip failed">Failed</span></td>
+                        <td>
+                          <a
+                            class="dc-btn yellow-btn"
+                            href="javascript:void(0)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#transfer-history-modal"
+                            >VIEW</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Verified -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade add-funds-modal"
+        id="add-funds-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Withdraw Funds</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-input-main">
+                      <label>Amount</label>
+                      <input type="number" placeholder="€0.00" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-input-main">
+                      <label>Date</label>
+                      <input
+                        type="date"
+                        placeholder="12-09-2024"
+                        value="12-09-2024"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-input-btn">
+                    <button type="submit" class="dc-btn yellow-btn">
+                      SUBMIT
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade transfer-history-modal"
+        id="transfer-history-modal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="tf-top">
+                <div class="tf-top-lf">
+                  <span>Deposit ID:</span>
+                  <h5>#430</h5>
+                </div>
+                <span class="table-chip completed">Completed</span>
+                <!-- if pending -->
+                <!-- <span class="table-chip pending">Pending</span> -->
+                <!-- if pending -->
+                <!-- if failed -->
+                <!-- <span class="table-chip failed">Failed</span> -->
+                <!-- if failed -->
+              </div>
+              <div class="tf-text">
+                <h6>Date:</h6>
+                <h6>12-09-2024</h6>
+              </div>
+              <div class="tf-text">
+                <h6>Amount:</h6>
+                <h6>£ 900</h6>
+              </div>
+              <div class="tf-attach">
+                <h6>View Attach File:</h6>
+                <div class="attachment-img">
+                  <img src="./images/slip.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".toggle-sidebar").on("click", function() {
+          $(".layout-sidebar").toggleClass("open");
+          $(".toggle-sidebar i").toggleClass("fa-bars-staggered")
+          $(".toggle-sidebar i").toggleClass("fa-xmark")
+      })
+  </script>
+  </body>
+</html>
